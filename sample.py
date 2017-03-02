@@ -9,6 +9,9 @@ last_text = None
 lang = 'hi'
 
 def greetuser(id,text):
+	url = pre+token+'/sendmessage?chat_id='+str(id)+'&text='+text
+	r = requests.post(url)
+	'''
 	language = detectlanguage.simple_detect(text)
 	if (language=='en'):
 		text = translate(text,lang)
@@ -17,6 +20,7 @@ def greetuser(id,text):
 
 	url = pre+token+'/sendmessage?chat_id='+str(id)+'&text='+text
 	r = requests.post(url)
+	'''
 
 def getupdates():
 	url = pre+token+'/getupdates'
